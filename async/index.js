@@ -79,3 +79,16 @@ order(2000, () => console.log(`${stocks.fruits[0]} was selected`))
     console.log("end of day");
   });
 
+
+//Promise : Promise is an object which represent eventual completion or failure of an asynchronous operation
+//states = pending: initial state, neither fulfilled nor rejected.
+// fulfilled: meaning that the operation was completed successfully.
+// rejected: meaning that the operation failed.
+
+//Methods : 
+// then, catch, finally
+//all :  The Promise.all() method returns a single Promise from a list of promises, when all promises fulfill. If any of promise is rejected whole promise sate will be rejected
+//The Promise.allSettled() method returns a single Promise from a list of promises, when all promises settel.
+//The Promise.any() method returns a single Promise from a list of promises, when any promise fulfill.
+// The Promise.race() method returns a Promise from a list of promises, when the faster promise settles.
+
