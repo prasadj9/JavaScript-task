@@ -1,0 +1,41 @@
+Event propagation is the process that determines the order in which event listeners are triggered when an event is fired on an element in the DOM. 
+It follows a specific order, which can be understood in three stages:
+
+Capturing Phase (Trickles Down): The event starts from the document and trickles down to the target element (from the outermost element to the actual element that triggered the event).
+Target Phase: The event reaches the target element itself.
+Bubbling Phase (Bubbles Up): The event bubbles up from the target element to the document (from the target element back to the outermost element).
+
+Event bubbling is the most common form of event propagation. 
+It means that when an event occurs on an element, the event will first trigger any event listeners on that element. 
+Then, the event will bubble up to its parent, and then to its parent's parent, and so on, until it reaches the document object.
+
+Event delegation is a technique where instead of adding an event listener to every child element,
+ you attach a single event listener to a parent element and use that to manage events for its child elements. 
+ This takes advantage of event bubbling.
+
+e.target: This refers to the element that triggered the event. 
+It’s the element that the user interacted with directly (i.e., the target of the event).
+
+e.currentTarget: This refers to the element to which the event listener is attached.
+ It’s the element that is currently handling the event.
+
+Key Takeaways : 
+Event propagation is the process of how events travel through the DOM (capturing → target → bubbling).
+Event bubbling is the default behavior, where the event bubbles up from the target to the root.
+Event delegation uses event bubbling to attach a single listener to a parent and manage events for all child elements.
+e.target refers to the actual element that triggered the event.
+e.currentTarget refers to the element to which the event listener is attached.
+
+When to Use Event Delegation ?
+When you have many child elements, and you want to avoid adding individual event listeners to each child.
+When child elements may be dynamically added or removed, delegating events to a parent element ensures that 
+newly added elements still trigger events.
+
+event.preventDefault(): Prevents the default action associated with the event
+ (like preventing form submission or link navigation).
+event.stopPropagation(): Stops the event from bubbling or capturing in the DOM hierarchy, 
+meaning other event listeners on parent elements won’t be triggered.
+Combination: You can use both methods together when you need to prevent the default action and 
+prevent the event from propagating to other event listeners.
+
+
