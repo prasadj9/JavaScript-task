@@ -39,3 +39,4 @@ Combination: You can use both methods together when you need to prevent the defa
 prevent the event from propagating to other event listeners.
 
 
+https://medium.com/@umaishassan/event-capturing-event-bubbling-stoppropagation-preventdefault-everything-you-need-to-know-de89b83af4b1

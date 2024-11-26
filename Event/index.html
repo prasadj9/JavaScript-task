@@ -7,13 +7,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      DIV
-      <form action="">
+    <div id="div1">
+      DIV <p>Event Bubbling</p>
+      <form id="form1" action="">
         FORM
-        <button>BUTTON</button>
+        <button id="button1">BUTTON</button>
       </form>
     </div>
+    <div id="div2">
+      DIV 2 <p>Event Stop Propogation</p>
+      <form id="form2" action="">
+        FORM 2
+        <button id="button2">BUTTON 2</button>
+      </form>
+    </div>
+    <div id="div3">
+      DIV 3 <p>Event Capturing</p>
+      <form id="form3" action="">
+        FORM 3
+        <button id="button3">BUTTON 3</button>
+      </form>
+    </div>
+
     <h2>Events</h2>
     <p>
       An event is an action that occurs as per the user's instruction as input
